@@ -18,7 +18,7 @@ chardet==4.0.0
     # via requests
 click==7.1.2
     # via pip-tools
-codecov==2.1.11
+codecov==2.1.13
     # via -r requirements-dev.in
 coverage==5.5
     # via
@@ -82,14 +82,14 @@ pyparsing==2.4.7
     # via packaging
 pysaml2==6.5.1
     # via -r requirements-dev.in
-pytest-cov==2.11.1
-    # via -r requirements-dev.in
-pytest-django==4.1.0
-    # via -r requirements-dev.in
 pytest==6.2.2
     # via
     #   pytest-cov
     #   pytest-django
+pytest-cov==2.11.1
+    # via -r requirements-dev.in
+pytest-django==4.1.0
+    # via -r requirements-dev.in
 python-dateutil==2.8.1
     # via pysaml2
 pytz==2021.1
@@ -116,7 +116,7 @@ toml==0.10.2
     #   tox
 tox==3.22.0
     # via -r requirements-dev.in
-urllib3==1.26.3
+urllib3==1.26.19
     # via requests
 virtualenv==20.4.2
     # via
