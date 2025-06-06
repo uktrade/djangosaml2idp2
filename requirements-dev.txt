@@ -14,11 +14,11 @@ cffi==1.14.5
     # via cryptography
 cfgv==3.2.0
     # via pre-commit
-chardet==4.0.0
+charset-normalizer==3.4.2
     # via requests
 click==7.1.2
     # via pip-tools
-codecov==2.1.11
+codecov==2.1.13
     # via -r requirements-dev.in
 coverage==5.5
     # via
@@ -82,21 +82,21 @@ pyparsing==2.4.7
     # via packaging
 pysaml2==6.5.1
     # via -r requirements-dev.in
-pytest-cov==2.11.1
-    # via -r requirements-dev.in
-pytest-django==4.1.0
-    # via -r requirements-dev.in
 pytest==6.2.2
     # via
     #   pytest-cov
     #   pytest-django
+pytest-cov==2.11.1
+    # via -r requirements-dev.in
+pytest-django==4.1.0
+    # via -r requirements-dev.in
 python-dateutil==2.8.1
     # via pysaml2
 pytz==2021.1
     # via pysaml2
 pyyaml==5.4.1
     # via pre-commit
-requests==2.25.1
+requests==2.32.2
     # via
     #   codecov
     #   pysaml2
