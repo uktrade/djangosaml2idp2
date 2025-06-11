@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9"]
-        django-version: ["2.2", "3.0", "3.1"]
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+        django-version: ["2.2", "3.0", "3.1", "4.2"]
 
     steps:
     - uses: actions/checkout@v2
@@ -29,12 +29,12 @@ jobs:
         sudo apt-get update && sudo apt-get install xmlsec1
         python -m pip install --upgrade pip django-stubs mypy tox
         pip install -r requirements-dev.txt
-    - name: Pylama linting
-      if: ${{ matrix.django-version }} == "3.0"
-      run: pylama djangosaml2idp
+    - name: flake8 linting
+      if: ${{ matrix.django-version }} == "4.2"
+      run: flake8 djangosaml2idp
     - name: MyPy check type annotations
       run: mypy djangosaml2idp
-      if: ${{ matrix.django-version }} == "3.0"
+      if: ${{ matrix.django-version }} == "4.2"
       continue-on-error: true
     - name: Tests
       run: tox -e py
