@@ -24,7 +24,7 @@ sync:
 	@pip install -e .[testing]
 
 lint:
-	@pylama djangosaml2idp
+	@flake8 djangosaml2idp
 
 # Clean up files from development
 clean:
