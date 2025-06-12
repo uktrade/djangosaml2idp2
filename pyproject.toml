@@ -21,7 +21,7 @@ description = "Forked from the original https://github.com/OTA-Insight/djangosam
 authors = ["Department for Business and Trade SRE Team <sre-team@digital.trade.gov.uk>"]
 readme = "README.rst"
 license = "MIT"
-packages = [{ include = "djangosaml2idp3" }]
+packages = [{ include = "djangosaml2idp" }]
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = "1.8.0"
