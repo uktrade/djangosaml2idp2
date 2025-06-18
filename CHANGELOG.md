@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.3] - 2025-06-13
+
+Update of aging dependencies that had vulnerabilities and also add support for newer Python and Django versions.
+
+### Added
+- Django 4.2 is added to the tests matrix.
+- Python 3.12 is added to the tests matrix.
+
+### Removed
+- Dependency on py package.
+- Removed dependency of pylama linting and now using flake8.
+
 ## [0.7.2] - 2020-04-14
 
 Many thanks for major contributions (especially on the testing front where the project was lacking) from [Amertz08](https://github.com/Amertz08) and [askvortsov1](https://github.com/askvortsov1)
