@@ -68,7 +68,7 @@ py>=1.10.0
     #   tox
 pycparser>=2.22
     # via cffi
-pyopenssl>=24.2.1
+pyopenssl>=24.2.1,<24.3.0
     # via pysaml2
 pyparsing>=3.2.3
     # via packaging
