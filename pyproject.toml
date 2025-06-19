@@ -16,7 +16,7 @@ exclude = '''
 
 [tool.poetry]
 name = "djangosaml2idp2"
-version = "0.9.3"
+version = "0.9.4"
 description = "Forked from the original https://github.com/OTA-Insight/djangosaml2idp to provide bugfixes and upgrades to python and django support."
 authors = ["Department for Business and Trade Platform Team <sre-team@digital.trade.gov.uk>"]
 readme = "README.rst"

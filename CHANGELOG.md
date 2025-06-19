@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.4] - 2025-06-19
+
+Fix of a security vulnerability: https://github.com/uktrade/djangosaml2idp2/security/code-scanning/1
+
+### Added
+- Downgraded pre-commit package to work better with other downstream packages.
+
 ## [0.9.3] - 2025-06-13
 
 Update of aging dependencies that had vulnerabilities and also add support for newer Python and Django versions.
