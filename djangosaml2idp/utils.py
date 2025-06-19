@@ -2,7 +2,8 @@ import base64
 import datetime
 import xml.dom.minidom
 from saml2.response import StatusResponse
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET
+import defusedxml.minidom
 import zlib
 from xml.parsers.expat import ExpatError
 from django.conf import settings
@@ -18,12 +19,12 @@ def repr_saml(saml: str, b64: bool = False):
     """
     try:
         msg = base64.b64decode(saml).decode() if b64 else saml
-        dom = xml.dom.minidom.parseString(msg)
+        dom = defusedxml.minidom.parseString(msg)
     except (UnicodeDecodeError, ExpatError):
         # in HTTP-REDIRECT the base64 must be inflated
         compressed = base64.b64decode(saml)
         inflated = zlib.decompress(compressed, -15)
-        dom = xml.dom.minidom.parseString(inflated.decode())
+        dom = defusedxml.minidom.parseString(inflated.decode())
     return dom.toprettyxml()
 
 
