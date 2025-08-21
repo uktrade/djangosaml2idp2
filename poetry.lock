@@ -545,18 +545,18 @@ files = [
 
 [[package]]
 name = "django"
-version = "4.2.23"
+version = "5.1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "django-4.2.23-py3-none-any.whl", hash = "sha256:dafbfaf52c2f289bd65f4ab935791cb4fb9a198f2a5ba9faf35d7338a77e9803"},
-    {file = "django-4.2.23.tar.gz", hash = "sha256:42fdeaba6e6449d88d4f66de47871015097dc6f1b87910db00a91946295cfae4"},
+    {file = "Django-5.1-py3-none-any.whl", hash = "sha256:d3b811bf5371a26def053d7ee42a9df1267ef7622323fe70a601936725aa4557"},
+    {file = "Django-5.1.tar.gz", hash = "sha256:848a5980e8efb76eea70872fb0e4bc5e371619c70fffbe48e3e1b50b2c09455d"},
 ]
 
 [package.dependencies]
-asgiref = ">=3.6.0,<4"
+asgiref = ">=3.8.1,<4"
 sqlparse = ">=0.3.1"
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
@@ -1324,4 +1324,4 @@ docs = ["Sphinx", "elementpath (>=4.1.5,<5.0.0)", "jinja2", "sphinx-rtd-theme"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<4.0"
-content-hash = "50e83f8795ea65b875d73b2c5d975216bbc653feb9788b85cbe07fee06634a71"
+content-hash = "ec4ca731c3c5b06f4984913e3294c67d675a379d005fa31c62160b9b7a1ea3ab"
