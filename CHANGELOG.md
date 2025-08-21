@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.5] - 2025-06-19
+
+Remove restriction of downstream apps using Django <=5.0
+
 ## [0.9.4] - 2025-06-19
 
 Fix of a security vulnerability: https://github.com/uktrade/djangosaml2idp2/security/code-scanning/1
