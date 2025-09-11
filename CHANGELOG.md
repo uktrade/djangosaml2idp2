@@ -1,8 +1,7 @@
 # Changelog
 
 ## [0.9.6] - 2025-09-11
-
-Remove restriction of downstream apps using Django <=5.0
+Upgrade Django to fix high priority CVE
 
 ## [0.9.5] - 2025-08-21
 
