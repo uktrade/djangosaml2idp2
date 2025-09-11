@@ -1,4 +1,4 @@
-django==4.2.22
+django==4.2.24
 pysaml2==7.5.2
 arrow
 pytz

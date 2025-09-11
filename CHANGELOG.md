@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.9.5] - 2025-06-19
+## [0.9.6] - 2025-09-11
+
+Remove restriction of downstream apps using Django <=5.0
+
+## [0.9.5] - 2025-08-21
 
 Remove restriction of downstream apps using Django <=5.0
 
