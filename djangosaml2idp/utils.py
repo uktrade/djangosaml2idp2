@@ -1,6 +1,5 @@
 import base64
 import datetime
-import xml.dom.minidom
 from saml2.response import StatusResponse
 import defusedxml.ElementTree as ET
 import defusedxml.minidom

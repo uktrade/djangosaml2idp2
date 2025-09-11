@@ -17,7 +17,7 @@ setup(
         open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     ]),
     install_requires=[
-        'django>=4.2.22',
+        'django>=4.2.24',
         'pysaml2>=7.1.2',
         'pytz',
         'arrow',
