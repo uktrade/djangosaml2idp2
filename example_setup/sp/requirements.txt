@@ -1,4 +1,4 @@
-django==4.2.24
+django==4.2.27
 djangosaml2==1.9.1
 pysaml2==7.1.2
 arrow

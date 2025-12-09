@@ -16,7 +16,7 @@ exclude = '''
 
 [tool.poetry]
 name = "djangosaml2idp2"
-version = "0.9.6"
+version = "0.9.7"
 description = "Forked from the original https://github.com/OTA-Insight/djangosaml2idp to provide bugfixes and upgrades to python and django support."
 authors = ["Department for Business and Trade Platform Team <sre-team@digital.trade.gov.uk>"]
 readme = "README.rst"
@@ -40,7 +40,7 @@ codecov = ">=2.1.13"
 coverage = ">=7.9.1"
 cryptography = ">=43.0.3"
 defusedxml = ">=0.7.1"
-django = ">=4.2.24"
+django = ">=4.2.27"
 distlib = ">=0.3.9"
 elementpath = ">=4.8.0"
 filelock = ">=3.18.0"
@@ -71,7 +71,7 @@ six = ">=1.17.0"
 snowballstemmer = ">=3.0.1"
 toml = ">=0.10.2"
 tox = ">=4.27.0"
-urllib3 = ">=2.4.0"
+urllib3 = ">=2.6.0"
 virtualenv = ">=20.31.2"
 xmlschema = ">=2.5.1"
 
