@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.9.7] - 2025-09-11
+Upgrade Django to fix critical priority CVE
+
 ## [0.9.6] - 2025-09-11
 Upgrade Django to fix high priority CVE
 
