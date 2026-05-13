@@ -207,6 +207,8 @@ Running the test suite
 ======================
 Install the dependencies in ``pyproject.toml``::
 
+  pip install poetry
+  poetry env use python
   poetry install
 
 Run the test suite from the project root::
