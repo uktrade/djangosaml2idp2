@@ -13,7 +13,7 @@ permissions:
   contents: read
   pull-requests: write
 
-env: 
+env:
   PYTHON_VERSION: "3.12"
   POETRY_VERSION: "2.0.1"
 
@@ -24,20 +24,20 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
-        django-version: ["2.2", "3.0", "3.1", "4.2"]
+        django-version: ["2.2", "3.0", "3.1", "4.2", "5.1"]
 
     steps:
     - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8  ## v6.0.1
       with:
         persist-credentials: false
         fetch-depth: 0
-    
+
     - name: Set up Python ${{ env.PYTHON_VERSION }}
       uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 ## v6.1.0
       with:
         python-version: ${{ env.PYTHON_VERSION }}
       id: setup-python
-      
+
     - name: Install dependencies and testing utilities
       run: |
         sudo apt-get update && sudo apt-get install xmlsec1 -y
@@ -53,12 +53,12 @@ jobs:
 
     - name: Ruff Check
       run: poetry run ruff check
-    
+
     - name: Test and Coverage
       run: |
         set -o pipefail
         poetry run pytest --junitxml=pytest.xml --cov --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
-    
+
     - name: Pytest Coverage Comment
       id: coverage
       uses: MishaKav/pytest-coverage-comment@dd5b80bde6d16941f336518e92929e89069d8451 ## v1.7.2
