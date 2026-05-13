@@ -9,6 +9,14 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+  pull-requests: write
+
+env: 
+  PYTHON_VERSION: "3.12"
+  POETRY_VERSION: "2.0.1"
+
 jobs:
   build:
 
@@ -19,25 +27,41 @@ jobs:
         django-version: ["2.2", "3.0", "3.1", "4.2"]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8  ## v6.0.1
       with:
-        python-version: ${{ matrix.python-version }}
+        persist-credentials: false
+        fetch-depth: 0
+    
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 ## v6.1.0
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+      id: setup-python
+      
     - name: Install dependencies and testing utilities
       run: |
-        sudo apt-get update && sudo apt-get install xmlsec1
+        sudo apt-get update && sudo apt-get install xmlsec1 -y
         python -m pip install --upgrade pip django-stubs mypy tox
-        pip install -r requirements-dev.txt
-    - name: flake8 linting
-      if: ${{ matrix.django-version }} == "4.2"
-      run: flake8 djangosaml2idp
-    - name: MyPy check type annotations
-      run: mypy djangosaml2idp
-      if: ${{ matrix.django-version }} == "4.2"
-      continue-on-error: true
-    - name: Tests
-      run: tox -e py
-    - uses: codecov/codecov-action@v1
+        pip install pytest pytest-cov
+        pip install poetry
+        poetry env use python
+        poetry lock
+        poetry install
+
+    - name: Ruff Format
+      run: poetry run ruff format
+
+    - name: Ruff Check
+      run: poetry run ruff check
+    
+    - name: Test and Coverage
+      run: |
+        set -o pipefail
+        poetry run pytest --junitxml=pytest.xml --cov --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
+    
+    - name: Pytest Coverage Comment
+      id: coverage
+      uses: MishaKav/pytest-coverage-comment@dd5b80bde6d16941f336518e92929e89069d8451 ## v1.7.2
       with:
-        file: ./cov.xml # optional
+        pytest-coverage-path: pytest-coverage.txt
+        junitxml-path: pytest.xml

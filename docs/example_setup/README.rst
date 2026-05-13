@@ -24,7 +24,10 @@ In order to do an actual login, you will need to create a user account on the Id
 
 If you don't want to use docker, simply do in a terminal from the idp directory
 
-    pip install -r requirements.txt
+    pip install poetry
+    poetry env use python
+    poetry lock
+    poetry install
 
     python manage.py migrate
 

@@ -20,7 +20,7 @@ class TestAdminForm:
         assert 'Either a remote metadata URL, or a local metadata xml needs to be provided.' in form.errors['__all__']
 
     @pytest.mark.django_db
-    @pytest.mark.parametrize('use_tz, tzinfo', [(True, timezone.utc), (False, None)])
+    @pytest.mark.parametrize('use_tz, tzinfo', [(True, datetime.UTC), (False, None)])
     def test_valid_local_metadata(self, settings, sp_metadata_xml, use_tz, tzinfo):
         settings.USE_TZ = use_tz
         form = ServiceProviderAdminForm({
@@ -59,7 +59,7 @@ class TestAdminForm:
 
     @pytest.mark.django_db
     @mock.patch('requests.get')
-    @pytest.mark.parametrize('use_tz, tzinfo', [(True, timezone.utc), (False, None)])
+    @pytest.mark.parametrize('use_tz, tzinfo', [(True, datetime.UTC), (False, None)])
     def test_valid_remote_metadata_url(self, mock_get, settings, sp_metadata_xml, use_tz, tzinfo):
         settings.USE_TZ = use_tz
         mock_get.return_value = mock.Mock(status_code=200, text=sp_metadata_xml)

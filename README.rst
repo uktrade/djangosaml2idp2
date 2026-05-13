@@ -205,15 +205,14 @@ There are three main components to adding multiple factor support.
 
 Running the test suite
 ======================
-Install the dev dependencies in ``requirements-dev.txt``::
+Install the dependencies in ``pyproject.toml``::
 
-  pip install -r requirements-dev.txt
+  poetry install
 
 Run the test suite from the project root::
 
-  tox -e format  # to run linting
-  tox -e py3.7-django3.0  # to run the tests
-  tox -e typing  # to run typechecking, this is allowed to fail
+  ruff check  # to run linting
+  poetry run pytest  # to run the tests
 
 Tests will be ran using CI when opening a merge request as well.
 
