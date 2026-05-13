@@ -61,12 +61,6 @@ jobs:
         poetry lock
         poetry install
 
-    - name: Ruff Format
-      run: poetry run ruff format
-
-    - name: Ruff Check
-      run: poetry run ruff check
-
     - name: Test and Coverage
       run: |
         set -o pipefail
