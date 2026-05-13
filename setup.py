@@ -17,8 +17,8 @@ setup(
         open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     ]),
     install_requires=[
-        'django>=4.2.27',
-        'pysaml2>=7.1.2',
+        'django>=5.1.15',
+        'pysaml2>=7.2.4',
         'pytz',
         'arrow',
         'setuptools>=79.0.1',
@@ -49,6 +49,7 @@ setup(
         "Framework :: Django :: 4.0",
         "Framework :: Django :: 4.1",
         "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.1",
         "Intended Audience :: Developers",
         "Intended Audience :: Information Technology",
         "License :: OSI Approved :: Apache Software License",

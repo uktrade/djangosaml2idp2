@@ -1,5 +1,0 @@
-django==4.2.28
-djangosaml2==1.9.1
-pysaml2==7.5.4
-arrow
-pytz
