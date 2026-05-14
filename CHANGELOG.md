@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.9] - 2026-05-14
+Fix GitHub actions workflow failing step on merge to main branch.
+Fix some minor dependabot vulnerabilities.
+
 ## [0.9.8] - 2026-05-13
 Move codebase to unified package/dependency management using Poetry.
 Fix several high priority CVEs:
