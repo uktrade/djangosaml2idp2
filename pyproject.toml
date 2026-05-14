@@ -76,7 +76,7 @@ snowballstemmer = ">=3.0.1"
 sqlparse = ">=0.5.4"
 toml = ">=0.10.2"
 urllib3 = ">=2.7.0"
-virtualenv = ">=20.31.2"
+virtualenv = ">=20.36.1"
 wheel = "^0.47.0"
 xmlschema = ">=2.5.1"
 
