@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.8] - 2026-05-13
+Move codebase to unified package/dependency management using Poetry.
+Fix several high priority CVEs:
+- Django from 4.2 to 5.1
+- urllib
+- cryptography
+- pyopenssl
+- pysaml2
+
 ## [0.9.7] - 2025-09-11
 Upgrade Django to fix critical priority CVE
 

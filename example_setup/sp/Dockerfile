@@ -5,8 +5,11 @@ RUN apk add --update \
     xmlsec xmlsec-dev \
   && rm -rf /var/cache/apk/*
 
-ADD requirements.txt /tmp
-RUN pip install -r /tmp/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install setuptools wheel
+RUN pipx install poetry --python $(which python)
+RUN ln -s /root/.local/pipx/venvs/poetry/bin/poetry /usr/local/bin/poetry
+RUN poetry install
 
 EXPOSE 8000
 CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8000

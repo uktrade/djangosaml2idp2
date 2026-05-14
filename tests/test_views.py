@@ -48,7 +48,7 @@ def logged_in_request() -> HttpRequest:
     request.META["SERVER_NAME"] = "localhost"
     request.META["SERVER_PORT"] = "80"
     username = "user1"
-    password = "bar"
+    password = "reallylongtestpassword"
     User.objects.create_user(username=username, password=password)
     user = authenticate(username=username, password=password)
     if user is not None:
