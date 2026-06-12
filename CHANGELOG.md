@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.0] - 2026-05-14
+Move to using `uktrade` forked pysaml2 repository due to lack of maintenance to
+the origianl `IdentityPython/pysaml2` repoistory.
+This allows fixing of high priority vulnerabilites to both pyopenssl and
+cryptography packages.
+
 ## [0.9.9] - 2026-05-14
 Fix GitHub actions workflow failing step on merge to main branch.
 Fix some minor dependabot vulnerabilities.
