@@ -2,7 +2,7 @@
 
 ## [0.10.0] - 2026-05-14
 Move to using `uktrade` forked pysaml2 repository due to lack of maintenance to
-the origianl `IdentityPython/pysaml2` repoistory.
+the original `IdentityPython/pysaml2` repository.
 This allows fixing of high priority vulnerabilites to both pyopenssl and
 cryptography packages.
 
