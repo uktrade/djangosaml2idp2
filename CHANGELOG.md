@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.10.0] - 2026-05-14
+Move to using `uktrade` forked pysaml2 repository due to lack of maintenance to
+the original `IdentityPython/pysaml2` repository.
+This allows fixing of high priority vulnerabilites to both pyopenssl and
+cryptography packages.
+
+## [0.9.9] - 2026-05-14
+Fix GitHub actions workflow failing step on merge to main branch.
+Fix some minor dependabot vulnerabilities.
+
+## [0.9.8] - 2026-05-13
+Move codebase to unified package/dependency management using Poetry.
+Fix several high priority CVEs:
+- Django from 4.2 to 5.1
+- urllib
+- cryptography
+- pyopenssl
+- pysaml2
+
 ## [0.9.7] - 2025-09-11
 Upgrade Django to fix critical priority CVE
 

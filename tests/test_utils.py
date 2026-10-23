@@ -53,7 +53,7 @@ class TestMetadataValidation:
         with pytest.raises(ValidationError):
             extract_validuntil_from_metadata('')
 
-    @pytest.mark.parametrize('use_tz, tzinfo', [(True, timezone.utc), (False, None)])
+    @pytest.mark.parametrize('use_tz, tzinfo', [(True, datetime.UTC), (False, None)])
     def test_extract_validuntil_from_metadata_valid(self, settings, sp_metadata_xml, use_tz, tzinfo):
         settings.USE_TZ = use_tz
         valid_until_dt_extracted = extract_validuntil_from_metadata(sp_metadata_xml)
